@@ -1,0 +1,179 @@
+  operations_idf_2014_2020.json : 2.2 Mo (récupéré le 2026-09-15 10:15)
+  insee_filosofi_2017_communes.zip : 52.5 Mo (récupéré le 2026-09-15 10:15)
+  operations_feder_fse_ftj_2021_2027.xlsx : 3.9 Mo (récupéré le 2026-09-15 10:15)
+=============== commun ===============
+1121 opérations chargées, 16 colonnes
+
+répartition par fonds (attendu FSE 787 / FEDER 313 / IEJ 21) :
+fonds_court
+FSE      787
+FEDER    313
+IEJ       21
+
+coût total éligible : 1668.9 M€
+montant UE reconstitué : 693.2 M€
+taux de cofinancement : min 0.000 / max 0.700
+opérations sans département renseigné : 10
+
+éclatement : 2254 couples (opération, département)
+contrôle de conservation du montant après prorata : écart = 0.0000 €
+montant UE non rattachable à un département : 68.5 M€
+=============== q1_analyse ===============
+
+### Top 10 des opérations par montant UE reconstitué
+| Bénéficiaire                     | Opération                                        | Fonds   |   Coût total éligible (M€) |   Taux UE |   Montant UE (M€) |
+|:---------------------------------|:-------------------------------------------------|:--------|---------------------------:|----------:|------------------:|
+| BPIFRANCE FINANCEMENT            | Fonds de prêts rebond FEDER Ile de France        | FEDER   |                     132.50 |      0.38 |             50.00 |
+| REGION ILE DE FRANCE             | REACT-EU - Fourniture d'équipements numériques i | FEDER   |                     105.00 |      0.40 |             42.00 |
+| Conseil régional d'Ile de France | PROGRAMME REGIONAL FORMATION ET EMPLOI 1ère RECO | FSE     |                      51.83 |      0.50 |             25.92 |
+| Conseil régional d'Ile de France | PROGRAMME REGIONAL QUALIFIANT "COMPETENCES" - PR | FSE     |                      50.52 |      0.50 |             25.26 |
+| Conseil régional d'Ile de France | PROGRAMME REGIONAL FORMATION ET EMPLOI 2018 INIT | FSE     |                      49.15 |      0.50 |             24.57 |
+| REGION ILE DE FRANCE             | Fourniture d'équipements numériques individuels  | FEDER   |                      60.95 |      0.40 |             24.38 |
+| Conseil régional d'Ile de France | PROGRAMME REGIONAL QUALIFIANT "COMPETENCES" PRC  | FSE     |                      45.63 |      0.50 |             22.81 |
+| Conseil régional d'Ile de France | Dispositif régional "Avenir Jeunes"-Programmes " | FSE     |                      43.49 |      0.50 |             21.74 |
+| Conseil régional d'Ile de France | Paris Region Venture Fund                        | FEDER   |                      32.80 |      0.50 |             16.40 |
+| Conseil régional d'Ile de France | PROGRAMME REGIONAL QUALIFIANT "COMPETENCES" - PR | FSE     |                      29.46 |      0.50 |             14.73 |
+
+poids du top 10 : 38.6% du montant UE total (693.2 M€)
+opérations communes aux deux classements (montant UE / coût total) : 9/10
+
+### Fonds européens 2014-2020 par département francilien
+| Département          |   Opérations |   Montant UE réparti (M€) | Part du total localisé   | Montant moyen par opération (€)   |
+|:---------------------|-------------:|--------------------------:|:-------------------------|:----------------------------------|
+| 93 Seine-Saint-Denis |          396 |                    112.63 | 18.1%                    | 284 422                           |
+| 75 Paris             |          340 |                     98.72 | 15.9%                    | 290 362                           |
+| 94 Val-de-Marne      |          265 |                     73.82 | 11.9%                    | 278 566                           |
+| 77 Seine-et-Marne    |          251 |                     70.95 | 11.4%                    | 282 687                           |
+| 95 Val-d'Oise        |          278 |                     69.46 | 11.2%                    | 249 839                           |
+| 78 Yvelines          |          255 |                     67.93 | 10.9%                    | 266 397                           |
+| 91 Essonne           |          240 |                     67.43 | 10.8%                    | 280 957                           |
+| 92 Hauts-de-Seine    |          216 |                     61.72 | 9.9%                     | 285 748                           |
+
+### Montant UE réparti par département et par fonds (M€)
+|   Département |   FEDER |   FSE |   IEJ |
+|--------------:|--------:|------:|------:|
+|            75 |   42.23 | 56.07 |  0.42 |
+|            77 |   39.50 | 31.04 |  0.42 |
+|            78 |   35.40 | 32.12 |  0.42 |
+|            91 |   38.76 | 28.25 |  0.42 |
+|            92 |   35.20 | 26.11 |  0.42 |
+|            93 |   58.87 | 43.72 | 10.04 |
+|            94 |   42.50 | 30.91 |  0.42 |
+|            95 |   35.69 | 33.34 |  0.42 |
+
+hors Île-de-France : 13 rattachements, 2.06 M€
+non rattachable à un département : 68.5 M€ (9.9% du montant UE)
+
+référentiel INSEE : 1260 communes franciliennes, revenu médian renseigné pour 1260
+  libellés ambigus écartés : ['Blandy', 'Blandy', 'Marolles-en-Brie', 'Marolles-en-Brie', 'Mondreville', 'Mondreville', 'Saint-Martin-des-Champs', 'Saint-Martin-des-Champs']
+appariement des localisations : 287 communes reconnues, 610 opérations sur 1121 (26.0% du montant UE)
+  principales localisations non appariées (non communales ou hors référentiel) :
+    ILE DE FRANCE, SEINE SAINT DENIS, SEINE ET MARNE, VAL D OISE, YVELINES, ESSONNE, VAL DE MARNE, HAUTS DE SEINE
+
+### Corrélation entre fonds européens et revenu médian déclaré (FiLoSoFi 2017)
+| Périmètre                                  | Variable corrélée au revenu médian   |   Pearson |   Spearman |
+|:-------------------------------------------|:-------------------------------------|----------:|-----------:|
+| communes financées (n=287)                 | montant UE total                     |    -0.074 |     -0.423 |
+| communes financées (n=287)                 | montant UE par habitant              |    -0.006 |     -0.178 |
+| toutes les communes franciliennes (n=1252) | montant UE total                     |    -0.085 |     -0.208 |
+| toutes les communes franciliennes (n=1252) | montant UE par habitant              |    -0.054 |     -0.188 |
+
+figure écrite : sorties/q1_correlation_revenu.png
+=============== q2_qualite ===============
+
+### Complétude des 13 colonnes (1121 opérations)
+| Colonne      |   Valeurs renseignées | Taux de complétude   |
+|:-------------|----------------------:|:---------------------|
+| beneficiaire |                  1121 | 100.0%               |
+| operation    |                  1121 | 100.0%               |
+| resume       |                  1121 | 100.0%               |
+| date_debut   |                  1121 | 100.0%               |
+| date_fin     |                  1121 | 100.0%               |
+| cout_total   |                  1121 | 100.0%               |
+| taux_ue      |                  1121 | 100.0%               |
+| localisation |                  1112 | 99.2%                |
+| iti          |                  1121 | 100.0%               |
+| departements |                  1111 | 99.1%                |
+| pays         |                  1121 | 100.0%               |
+| categorie    |                   225 | 20.1%                |
+| fonds        |                  1121 | 100.0%               |
+
+### Anomalies mesurées sur les 1 121 opérations
+| Dimension     | Constat                                                                         | Mesure                                                                                           |
+|:--------------|:--------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|
+| Exactitude    | Codes département invalides ou impossibles                                      | 4 codes distincts : 2, 3, 3.2153009259259258, 97                                                 |
+| Exactitude    | Taux de cofinancement nul ou absent                                             | 1 opération                                                                                      |
+| Exactitude    | Taux de cofinancement supérieur à 50 %, plafond usuel en région plus développée | 88 opérations, dont 10 FEDER jusqu'à 70% (l'IEJ peut légitimement dépasser ce seuil)             |
+| Exactitude    | Coût total éligible nul ou absent                                               | 1 opération                                                                                      |
+| Exactitude    | Date de fin postérieure à la fin d'éligibilité de la programmation (31/12/2023) | 1 opération (jusqu'au 30/09/2027)                                                                |
+| Complétude    | Aucun département renseigné                                                     | 10 opérations, soit 68.5 M€ non localisables (9.9% du montant UE)                                |
+| Complétude    | Aucun montant de subvention UE dans le jeu                                      | 0 colonne : le montant UE doit être reconstitué (coût total x taux)                              |
+| Complétude    | Aucun identifiant d'opération ni code commune INSEE                             | 0 colonne : tout rapprochement externe repose sur des libellés                                   |
+| Complétude    | Catégorie d'intervention renseignée                                             | 225 opérations sur 1121, soit 20.1% : l'analyse thématique est impossible sur 4 opérations sur 5 |
+| Cohérence     | Localisation empilant plusieurs communes dans une seule chaîne                  | 169 opérations (séparateur « : »)                                                                |
+| Cohérence     | Localisation non communale (région ou département)                              | 419 opérations                                                                                   |
+| Cohérence     | Opérations hors Île-de-France conservées sans indicateur dédié                  | codes 10, 13, 21, 27, 60, 74, 76 présents                                                        |
+| Cohérence     | Périmètre annoncé non tenu : le FEADER est décrit mais absent                   | fonds présents : FEDER, FSE, IEJ                                                                 |
+| Unicité       | Lignes identiques sur bénéficiaire + opération + coût                           | 0 doublons stricts (35 couples bénéficiaire/opération répétés)                                   |
+| Utilisabilité | Résumé recopiant à l'identique le nom de l'opération                            | 10 opérations                                                                                    |
+| Cohérence     | Date de fin antérieure à la date de début                                       | 0 opération                                                                                      |
+| Fraîcheur     | Dernière mise à jour de la source                                               | 3 mai 2022, pour une programmation ouverte jusqu'au 31/12/2023                                   |
+| Fraîcheur     | Opérations démarrées après la dernière mise à jour                              | 8 opérations démarrent en 2022 ou après                                                          |
+
+--- détail des codes département aberrants (localisation à l'appui) ---
+  ['3'] | SAINT DENIS | ASSOCIATION LE 6B
+  ['3.2153009259259258'] | SEINE-ET-MARNE: AUBE: AISNE | UNION DES FEDERATIONS POUR LA PECHE
+  ['97', '95'] | SAINT-LEU: TAVERNY: SANNOIS: LE PLESSIS-BOUCHARD: PIERRELAYE: MONTIGNY | Communauté D'Agglomération Val Pari
+  ['2'] | MONTIGNY-LENGRAI | ENTENTE OISE AISNE
+
+répartition des années de début : {2014: 96, 2015: 195, 2016: 180, 2017: 234, 2018: 136, 2019: 114, 2020: 95, 2021: 63, 2022: 8}
+période couverte : 01/01/2014 au 30/09/2027
+=============== q3_feder ===============
+313 opérations FEDER sur 1121 au total, dont 60 rattachées à plusieurs départements
+
+### FEDER 2014-2020 par département francilien
+| Département          |   Opérations FEDER |   Montant UE réparti (M€) | Montant moyen par opération (€)   | Variante au prorata (€)   |
+|:---------------------|-------------------:|--------------------------:|:----------------------------------|:--------------------------|
+| 75 Paris             |                 99 |                     42.23 | 2 044 370                         | 426 592                   |
+| 93 Seine-Saint-Denis |                 95 |                     58.87 | 2 310 656                         | 619 683                   |
+| 94 Val-de-Marne      |                 93 |                     42.50 | 2 181 590                         | 456 949                   |
+| 91 Essonne           |                 82 |                     38.76 | 2 433 782                         | 472 741                   |
+| 77 Seine-et-Marne    |                 78 |                     39.50 | 2 567 142                         | 506 370                   |
+| 78 Yvelines          |                 77 |                     35.40 | 2 541 570                         | 459 676                   |
+| 92 Hauts-de-Seine    |                 76 |                     35.20 | 2 575 189                         | 463 096                   |
+| 95 Val-d'Oise        |                 69 |                     35.69 | 2 838 160                         | 517 305                   |
+
+>>> Réponse Q3
+  75 Paris : 99 opérations FEDER  montant UE moyen par opération 2 044 370 € (au prorata : 426 592 €)
+  93 Seine-Saint-Denis : 95 opérations FEDER  montant UE moyen par opération 2 310 656 € (au prorata : 619 683 €)
+  94 Val-de-Marne : 93 opérations FEDER  montant UE moyen par opération 2 181 590 € (au prorata : 456 949 €)
+
+classement sur les seules opérations mono-départementales : 75 (47), 93 (42), 94 (41)
+contrôle des effectifs : conforme au comptage brut de la source
+
+rattachements hors Île-de-France recensés (voir Q2) : 21, 10, 2, 3.2153009259259258, 60, 76
+=============== q4_evolution ===============
+programme retenu pour 2021-2027 : Programme régional Île-de-France et bassin de la Seine FEDER-FSE+ 2021-2027
+
+### Deux programmations, état des listes publiées
+| Programmation   |   Opérations publiées |   Coût total éligible (M€) |   Montant UE (M€) | Taux UE moyen   | Montant UE moyen par opération (€)   | Montant UE médian par opération (€)   |
+|:----------------|----------------------:|---------------------------:|------------------:|:----------------|:-------------------------------------|:--------------------------------------|
+| 2014-2020       |                  1121 |                   1,668.90 |            693.20 | 41.5%           | 618 395                              | 130 076                               |
+| 2021-2027       |                   140 |                     417.40 |            167.70 | 40.2%           | 1 198 056                            | 416 841                               |
+
+répartition par fonds :
+            opérations           montant UE (M€)           
+periode      2014-2020 2021-2027       2014-2020  2021-2027
+fonds_court                                                
+FEDER              313        50      329.702334  75.630551
+FSE                787         0      350.547682   0.000000
+IEJ                 21         0       12.971130   0.000000
+FSE+                 0        90        0.000000  92.097324
+
+cumul à la 4ᵉ année : 2014-2020 = 292.2 M€, 2021-2027 = 156.3 M€ (soit 54% du rythme précédent)
+opérations démarrées dans les 4 premières années : {'2014-2020': 705, '2021-2027': 125}
+
+figures écrites : q4_volumes_par_fonds.png, q4_cumul_millesime.png, q4_taille_operations.png
+
+fichier 21-27 : 5148 opérations toutes régions, dont 140 pour le programme francilien (2.7%)
+localisation 21-27 : département renseigné pour 727/5148 lignes au national

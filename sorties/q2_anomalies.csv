@@ -1,0 +1,19 @@
+Dimension,Constat,Mesure
+Exactitude,Codes département invalides ou impossibles,"4 codes distincts : 2, 3, 3.2153009259259258, 97"
+Exactitude,Taux de cofinancement nul ou absent,1 opération
+Exactitude,"Taux de cofinancement supérieur à 50 %, plafond usuel en région plus développée","88 opérations, dont 10 FEDER jusqu'à 70% (l'IEJ peut légitimement dépasser ce seuil)"
+Exactitude,Coût total éligible nul ou absent,1 opération
+Exactitude,Date de fin postérieure à la fin d'éligibilité de la programmation (31/12/2023),1 opération (jusqu'au 30/09/2027)
+Complétude,Aucun département renseigné,"10 opérations, soit 68.5 M€ non localisables (9.9% du montant UE)"
+Complétude,Aucun montant de subvention UE dans le jeu,0 colonne : le montant UE doit être reconstitué (coût total x taux)
+Complétude,Aucun identifiant d'opération ni code commune INSEE,0 colonne : tout rapprochement externe repose sur des libellés
+Complétude,Catégorie d'intervention renseignée,"225 opérations sur 1121, soit 20.1% : l'analyse thématique est impossible sur 4 opérations sur 5"
+Cohérence,Localisation empilant plusieurs communes dans une seule chaîne,169 opérations (séparateur « : »)
+Cohérence,Localisation non communale (région ou département),419 opérations
+Cohérence,Opérations hors Île-de-France conservées sans indicateur dédié,"codes 10, 13, 21, 27, 60, 74, 76 présents"
+Cohérence,Périmètre annoncé non tenu : le FEADER est décrit mais absent,"fonds présents : FEDER, FSE, IEJ"
+Unicité,Lignes identiques sur bénéficiaire + opération + coût,0 doublons stricts (35 couples bénéficiaire/opération répétés)
+Utilisabilité,Résumé recopiant à l'identique le nom de l'opération,10 opérations
+Cohérence,Date de fin antérieure à la date de début,0 opération
+Fraîcheur,Dernière mise à jour de la source,"3 mai 2022, pour une programmation ouverte jusqu'au 31/12/2023"
+Fraîcheur,Opérations démarrées après la dernière mise à jour,8 opérations démarrent en 2022 ou après
