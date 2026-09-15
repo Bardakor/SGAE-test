@@ -13,8 +13,8 @@ par les scripts livrés, aucun n'est saisi à la main.
 1. **Le jeu de données ne contient pas le montant des fonds européens** : il faut le reconstituer
    (coût éligible × taux de cofinancement). Résultat : **693,2 M€ d'aide UE** pour 1 668,9 M€ de
    dépenses éligibles sur 1 121 opérations.
-2. **Financement très concentré** : le top 10 pèse **38,6 %** du montant UE, et 8 de ces 10
-   opérations sont portées par la Région ou Bpifrance.
+2. **Financement très concentré** : le top 10 pèse **38,6 %** du montant UE, et ses 10
+   opérations sont toutes portées par la Région (9) ou Bpifrance (1).
 3. **Seine-Saint-Denis premier département** (112,6 M€ ; 18,1 %), devant Paris (98,7 M€). Rapport
    du premier au dernier : 1,8.
 4. **La corrélation fonds / revenu médian n'est pas concluante** : faible, négative, et calculée
@@ -82,7 +82,8 @@ Par fonds (montant UE réparti, M€) :
 
 Source : INSEE FiLoSoFi 2017, fichier communal des revenus **déclarés**, indicateur `Q217` (médiane
 du revenu déclaré par unité de consommation des ménages fiscaux). 1 260 communes franciliennes,
-médiane renseignée pour les 1 260.
+médiane renseignée pour les 1 260 ; 8 d'entre elles (4 libellés homonymes) sont écartées
+faute de pouvoir les départager, d'où n = 1 252.
 
 | Périmètre | Variable | Pearson | Spearman |
 |:---|:---|---:|---:|
@@ -103,7 +104,7 @@ exploitable ne peut être établie.**
 
 1. **Aucun code commune INSEE** dans le jeu : la localisation est du texte libre (`PARIS`,
    `ÎLE-DE-FRANCE`, `EPT PLAINE COMMUNE`, ou plusieurs communes empilées avec « : »).
-   L'appariement se fait par libellé normalisé, faillible ; 4 homonymes franciliens sont écartés.
+   L'appariement se fait par libellé normalisé, faillible ; 4 libellés homonymes (8 communes) sont écartés.
 2. **26 % du montant UE seulement est rattachable à une commune** : 419 opérations sont localisées
    à la région ou au département. Les plus gros financements sont précisément ceux qui échappent à
    la maille communale.
@@ -120,7 +121,7 @@ exploitable ne peut être établie.**
 
 ## Niveau de qualité : suffisant pour l'obligation de publicité, insuffisant pour l'analyse
 
-11 des 13 colonnes sont renseignées à 100 %. Les manques ne sont donc pas volumétriques mais
+10 des 13 colonnes sont renseignées à 100 %. Les manques ne sont donc pas volumétriques mais
 **structurels** : ce qui manque est ce qui rend la donnée exploitable.
 
 | Dimension | Constat | Mesure |

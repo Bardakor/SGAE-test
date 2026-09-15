@@ -13,8 +13,9 @@ lang: fr
 | pandas | 3.0.5 | Chargement, jointures, agrégations, corrélations |
 | matplotlib | 3.11.2 | Les 4 figures, en PNG (aucune dépendance en ligne) |
 | openpyxl | 3.1.5 | Lecture des classeurs `.xlsx` (INSEE, fichier 21-27) |
-| uv | — | Environnement virtuel et dépendances |
-| pandoc + XeLaTeX | 3.10.2 | Conversion des deux markdown en PDF |
+| uv | 0.9.5 | Environnement virtuel et dépendances |
+| pandoc | 3.10.2 | Conversion des deux markdown en PDF |
+| XeLaTeX | TeX Live 2025 | Moteur de rendu des PDF |
 | Claude Code (Opus 5) | — | Assistant de développement : exploration des schémas, écriture et débogage des scripts, rédaction sous revue humaine |
 
 `scipy` a été volontairement écarté : la corrélation de Spearman est obtenue par un Pearson sur les
@@ -30,13 +31,17 @@ tous les chiffres des deux documents sortent des scripts**, donc rejouables et v
 - **Opérations 2021-2027** — fichier national FEDER-FSE+-FTJ d'europe-en-france.gouv.fr, version
   du 08/09/2025. 5 148 opérations toutes régions.
 
-Toutes récupérées le 15/09/2026 à 10:15 ; URL exactes dans `src/telecharger.py`, journal horodaté
-dans `sorties/journal_telechargement.md`.
+Toutes récupérées le 15/09/2026 à 10:15 (URL également inscrites dans `src/telecharger.py`,
+journal horodaté dans `sorties/journal_telechargement.md`) :
+
+- <https://data.iledefrance.fr/api/explore/v2.1/catalog/datasets/gestion-des-fonds-europeens-liste-des-operations/exports/json>
+- <https://www.insee.fr/fr/statistiques/fichier/4291712/indic-struct-distrib-revenu-2017-COMMUNES.zip>
+- <https://www.europe-en-france.gouv.fr/sites/default/files/2025-09/20250908_liste_operations_feder_fse_ftj.xls.xlsx>
 
 Deux choix de fichier à signaler :
 
 - **JSON plutôt que CSV** pour 14-20 : le champ département est multivalué ; le CSV l'aplatit en
-  une chaîne dont le séparateur doit être devinné, le JSON le restitue comme une liste.
+  une chaîne dont le séparateur doit être deviné, le JSON le restitue comme une liste.
 - **Revenus déclarés (`FILO2017_DEC_COM`) plutôt que disponibles** : la question porte sur les
   *foyers fiscaux*, donc sur le revenu déclaré avant redistribution. Indicateur `Q217`, onglet
   `ENSEMBLE`, à partir de la 6ᵉ ligne (les 5 premières sont un en-tête de présentation).
@@ -97,8 +102,8 @@ normalisation des deux côtés (majuscules, sans accent, tirets et apostrophes e
 jointure sur le référentiel francilien, puis répartition du montant à parts égales entre les
 libellés cités.
 
-Deux garde-fous : les **4 homonymes franciliens** (Blandy, Marolles-en-Brie, Mondreville,
-Saint-Martin-des-Champs) sont écartés faute de pouvoir les départager ; les localisations **non
+Deux garde-fous : les **4 libellés homonymes** (Blandy, Marolles-en-Brie, Mondreville,
+Saint-Martin-des-Champs, soit 8 communes sur 1 260) sont écartés faute de pouvoir les départager ; les localisations **non
 communales ne sont pas rattachées de force**, elles sont comptées puis exclues.
 
 Couverture obtenue : 287 communes, 610 opérations, mais **26,0 % du montant UE** — chiffre affiché
@@ -119,8 +124,9 @@ Comparer une programmation avancée (liste arrêtée en mai 2022) à une program
 
 1. **Alignement sur l'année de programmation** : l'année de début de chaque opération devient un
    rang (année 1 = 2014 ou 2021), puis les montants sont cumulés. La comparaison n'est tenue pour
-   licite que **jusqu'à la 4ᵉ année**. Au-delà, la courbe 21-27 est **interrompue** sur le
-   graphique — la prolonger à plat aurait suggéré un arrêt de la programmation.
+   licite que **jusqu'à la 4ᵉ année**. La courbe 21-27 est tracée jusqu'à la 5ᵉ (année en
+   cours au moment de l'extraction, repérée sur le graphique par l'horizon d'observation),
+   puis **interrompue** — la prolonger à plat aurait suggéré un arrêt de la programmation.
 2. **Priorité aux indicateurs insensibles au stade d'avancement** : médiane et moyenne par
    opération, taux de cofinancement, répartition par fonds. Ils restent interprétables même sur
    des listes incomplètes, contrairement aux totaux.
