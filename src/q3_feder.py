@@ -40,7 +40,9 @@ tableau = pd.DataFrame(
     {
         "Département": (francilien["departement"] + " " + francilien["nom"]).values,
         "Opérations FEDER": francilien["nb_operations"].values,
-        "Montant UE réparti (M€)": (francilien["montant_reparti"] / 1e6).round(2).values,
+        "Montant UE réparti (M€)": (francilien["montant_reparti"] / 1e6)
+        .round(2)
+        .values,
         "Montant moyen par opération (€)": euros(francilien["moyen_integral"]).values,
         "Variante au prorata (€)": euros(francilien["moyen_reparti"]).values,
     }

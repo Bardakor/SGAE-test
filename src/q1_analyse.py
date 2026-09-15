@@ -76,7 +76,9 @@ tableau_dep = pd.DataFrame(
         "Département": (idf["departement"] + " " + idf["nom"]).values,
         "Opérations": idf["nb_operations"].values,
         "Montant UE réparti (M€)": (idf["montant_reparti"] / 1e6).round(2).values,
-        "Part du total localisé": (idf["montant_reparti"] / idf["montant_reparti"].sum())
+        "Part du total localisé": (
+            idf["montant_reparti"] / idf["montant_reparti"].sum()
+        )
         .map("{:.1%}".format)
         .values,
         "Montant moyen par opération (€)": euros(

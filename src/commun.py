@@ -97,7 +97,9 @@ def eclater_departements(df):
     d = d[d["nb_departements"] > 0].explode("departements")
     d["montant_ue_prorata"] = d["montant_ue"] / d["nb_departements"]
     localisable = df.loc[df["departements"].apply(len) > 0, "montant_ue"].sum()
-    assert abs(d["montant_ue_prorata"].sum() - localisable) < 1, "le prorata ne conserve pas le montant"
+    assert abs(d["montant_ue_prorata"].sum() - localisable) < 1, (
+        "le prorata ne conserve pas le montant"
+    )
     return d.rename(columns={"departements": "departement"})
 
 
