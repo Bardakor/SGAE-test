@@ -1,7 +1,7 @@
 # Fonds européens de cohésion en Île-de-France
 
 Analyse des opérations financées par les fonds européens en Île-de-France : **FEDER, FSE et IEJ sur
-2014-2020** (1 121 opérations, 693,2 M€ d'aide UE) et **FEDER, FSE+ et FTJ sur 2021-2027**, avec
+2014-2020** (1 121 opérations, 693,2 M€ d'aide UE) et **FEDER et FSE+ sur 2021-2027** (le FTJ ne concerne aucun territoire francilien), avec
 croisement INSEE sur le revenu médian communal. Étude de cas technique, réalisée en 2 heures.
 
 - 📄 **[Résultats](RESULTATS.md)** ([PDF](RESULTATS.pdf)) — réponses et restitutions
@@ -46,7 +46,7 @@ méthodologie).
 
 ```
 RESULTATS.md / METHODOLOGIE.md   livrables (+ PDF)
-src/                             6 scripts — 292 instructions, 0 classe
+src/                             6 scripts — 928 lignes, 9 fonctions, 0 classe
 sorties/                         tableaux (.md/.csv), figures (.png), journaux d'exécution
 data/                            sources brutes, non versionnées (re-téléchargeables)
 ```
@@ -59,5 +59,5 @@ data/                            sources brutes, non versionnées (re-téléchar
 | Revenus communaux (FiLoSoFi 2017) | [INSEE](https://www.insee.fr/fr/statistiques/4291712) |
 | Opérations 2021-2027 | [europe-en-france.gouv.fr](https://www.europe-en-france.gouv.fr/fr/ressources/liste-operations-feder-fse-ftj-2021-2027) |
 
-Les données brutes ne sont pas versionnées (56 Mo) : `src/telecharger.py` les récupère à
+Les données brutes ne sont pas versionnées (59 Mo) : `src/telecharger.py` les récupère à
 l'identique et journalise URL, taille et date dans `sorties/journal_telechargement.md`.
